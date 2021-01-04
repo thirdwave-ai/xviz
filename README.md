@@ -38,6 +38,8 @@ $ cd xviz
 $ yarn bootstrap
 ```
 
+#To build thirdwave protos
+do something similiar to `protoc -I=/home/trevor/thirdwave --js_out=import_style=commonjs,binary:build /home/trevor/thirdwave/messages/protos/*.proto` from xviz/examples/converters/alpha_zero
 Convert and serve KITTI example data:
 
 ```bash
