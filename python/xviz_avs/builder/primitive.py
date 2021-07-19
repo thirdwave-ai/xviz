@@ -18,7 +18,7 @@ class XVIZPrimitiveBuilder(XVIZBaseBuilder):
         self._primitives = {}
         self.reset()
 
-    def image(self, data):
+    def image(self, data, width, height):
         '''
         Add image data
         '''
@@ -31,7 +31,7 @@ class XVIZPrimitiveBuilder(XVIZBaseBuilder):
             self._logger.error("An image data must be a string or numpy array")
         self._validate_prop_set_once("_image")
         self._type = PRIMITIVE_TYPES.IMAGE
-        self._image = Image(data=data)
+        self._image = Image(data=data, width_px=width, height_px=height)
 
         return self
 
